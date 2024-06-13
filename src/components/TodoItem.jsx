@@ -41,7 +41,7 @@ const TodoItem = ({ todo, setTodos, editingTodo, setEditingTodo, newTitle, setNe
     };
 
     return (
-        <div className="todo-item" key={todo.id}>
+        <div className={`todo-item ${todo.completed ? 'completed' : ''}`} key={todo.id}>
             <input 
                 type="checkbox" 
                 checked={todo.completed ? true : false} 
